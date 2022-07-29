@@ -37,7 +37,7 @@ class Solution:
         # return: string
 
         # TODO: Write code below to return a string with the solution to the prompt
-        id = ""
+        a = ""
         idx = 0
         names = ["", ""]
 
@@ -46,11 +46,11 @@ class Solution:
             if i in nums:
                 idx = max(idx, 1)
                 if i != "0":
-                    id += i
+                    a += i
             else:
                 names[idx] += i
 
-        return f"First name = {names[0]}, Last name = {names[1]}, id = {id}"
+        return f"First name = {names[0]}, Last name = {names[1]}, id = {a}"
 
 def main():
     string1 = input()
