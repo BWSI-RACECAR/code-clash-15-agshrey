@@ -37,13 +37,20 @@ class Solution:
         # return: string
 
         # TODO: Write code below to return a string with the solution to the prompt
-        a = id.split("0")
-        b = []
-        for i in a:
-            if i != "":
-                b.append(i)
+        id = ""
+        idx = 0
+        names = ["", ""]
 
-        return ("First name = " + b[0] + ", Last name = " + b[1] + ", id = " + b[2])
+        nums = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "0"]
+        for i in id:
+            if i in nums:
+                idx = max(idx, 1)
+                if i != "0":
+                    id += i
+            else:
+                names[idx] += i
+
+        return f"First name = {names[0]}, Last name = {names[1]}, id = {id}"
 
 def main():
     string1 = input()
